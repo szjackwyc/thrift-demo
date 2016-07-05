@@ -7,6 +7,7 @@ public class ThriftServerMain {
 	private static volatile boolean running = true;
 
 	public static void main(String[] args) {
+		//读取 配置文件
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath*:spring-mybatis.xml");
 		context.start();
 		ThriftServerProxy thriftServerProxy = (ThriftServerProxy) context.getBean("thriftServerProxy");
